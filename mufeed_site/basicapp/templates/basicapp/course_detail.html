@@ -1,0 +1,42 @@
+{% extends "basicapp/basi_app_base.html" %}
+
+{% block body_block %}
+
+
+<h1>Welcome to the Course Detail Page</h1>
+<h2>Student Details:</h2>
+
+<table class="container">
+
+
+	<thead>
+		<tr>
+			<th><h1>Name Of Student</h1></th>
+			<th><h1>Age</h1></th>
+      <th><h1>Course Joined</h1></th>
+
+		</tr>
+	</thead>
+	<tbody>
+    {% for student in course_detail.students.all %}
+		<tr>
+			<td>{{ student.name}}</td>
+			<td>{{ student.age }}</td>
+      <td>{{ student.course }}</td>
+
+		</tr>
+	</tbody>
+    {% endfor %}
+</table>
+
+
+
+<div class="container">
+  <a href="{% url 'basicapp:createStudent' %}">Add Students</a> &nbsp;
+  <a class="btn btn-warning" href="{% url 'basicapp:update' pk=course_detail.pk %}">Update Course</a>
+&nbsp;
+  <a class="btn btn-danger" href="{% url 'basicapp:delete' pk=course_detail.pk %}">Delete Course</a>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/basicapp.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/tab.css' %}" />
+
+
+  </head>
+  <body>
+    <nav id="navigationBar">
+  <ul>
+    <li>
+      <a href="{% url 'index' %}" class="link">Home</a>
+    </li>
+    <li>
+      <a href="{% url 'basicapp:create'  %}" class="link">Create Course</a>
+    </li>
+  
+    </li>
+  </ul>
+</nav>
+
+  <div class="container">
+    {% block body_block %}
+
+    {% endblock %}
+
+  </div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/sty.css' %}" />
+  </head>
+  <body>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+    <div id="message" align="center">Cloud Computing Google Analytics</div>
+
+
+    <div id="page-wrap" align="center">
+
+    		<div id="all">
+
+    				<ul>
+    						<li><a href="{% url 'index' %}">home</a></li>
+    						<li><a href="{% url 'basicapp:list' %}" id="lulz">Courses</a></li>
+    						<li><a href="{% url 'basicapp:create' %}">Create Course</a></li>
+
+    				</ul>
+
+
+    		</div>
+
+    </div>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+
+    <div id="HjelmPatrik" align="center">
+    		<a href="#"  id="HjelmPatrik">A thing by <strong>@Shaikh Al Mufeed</strong></a>
+    </div>
+    <div class="container">
+        {% block body_block %}
+
+        {% endblock %}
+    </div>
+
+  </body>
+</html>
